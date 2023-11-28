@@ -1,9 +1,3 @@
-# memoryScan
-Based on a famous tool in game hacking, Cheat Engine, I come to an idea making an application in which we're able to scan variables in another running program in raw memory and modify them freely.
-
-## Let's get started!
-1. Create a simple main.cc program which contains a variable "count" and can be changed by user in runtime.
-```c++
 #include <unistd.h>
 #include <iostream>
 #include <cstdlib>
@@ -32,4 +26,3 @@ int main() {
 
     return 0;
 }
-```
