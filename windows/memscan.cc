@@ -2,6 +2,9 @@
 #include <tlhelp32.h>
 #include <tchar.h>
 #include <stdio.h>
+#include <iostream>
+
+using namespace std;
 
 //  Forward declarations:
 BOOL GetProcessList( );
@@ -49,6 +52,20 @@ BOOL GetProcessList( )
     _tprintf( TEXT("\n\n=====================================================" ));
     _tprintf( TEXT("\nPROCESS NAME:  %s"), pe32.szExeFile );
     _tprintf( TEXT("\n-------------------------------------------------------" ));
+
+    string mainProcessName = "main.exe";
+
+    int i = 0;
+    string processName;
+    while (pe32.szExeFile[i] != '\0' || i < 256) {
+        processName += pe32.szExeFile[i];
+        i++;
+    }
+
+    processName += '\0';
+    if (processName.compare(mainProcessName)) {
+        cout << endl << "SUCCESS!!!!!!!!!!!!" << endl;
+    }
 
     // Retrieve the priority class.
     dwPriorityClass = 0;
