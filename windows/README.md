@@ -42,3 +42,18 @@ int main() {
 3. Create an example of OpenProcess(...) Windows API function to get a lists of running Processes/Threads based on example from MS.
 [Taking a Snapshot and Viewing Processes](https://learn.microsoft.com/en-us/windows/win32/toolhelp/taking-a-snapshot-and-viewing-processes)
 
+4. Add a simple way to identify main.exe process.
+```c++
+string mainProcessName = "main.exe";
+int i = 0;
+string processName;
+while (pe32.szExeFile[i] != '\0' || i < 256) {
+    processName += pe32.szExeFile[i];
+    i++;
+}
+processName += '\0';
+
+if (processName.compare(mainProcessName)) {
+    cout << endl << "SUCCESS!!!!!!!!!!!!" << endl;
+}
+```
