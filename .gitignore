@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 .exe
+=======
+*.exe
+>>>>>>> dfd3d6c (NOREF: Create memscan.cc and test OpenProcess Windows API)
