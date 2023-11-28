@@ -38,3 +38,8 @@ int main() {
 >> g++ -o main main.cc
 >> ./main.exe
 ```
+
+3. Create an example of OpenProcess(...) Windows API function to get a lists of running Processes/Threads based on example from MS.
+```bash
+[Taking a Snapshot and Viewing Processes](https://learn.microsoft.com/en-us/windows/win32/toolhelp/taking-a-snapshot-and-viewing-processes)
+```
